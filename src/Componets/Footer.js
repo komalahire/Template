@@ -3,35 +3,34 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import { SocialIcon } from 'react-social-icons';
-
-
-
+import Box from '@material-ui/core/Box';
 
 
 export default function Footer() {
     return (
-        <React.Fragment>
-            <div className="Footer">
-            <Container >
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={4}>
-                    <SocialIcon url="https://x.facebook.com/navgurukul/" />
-                </Grid>
-                    <Grid item xs={12} md={4}>
-                    <SocialIcon url="https://www.instagram.com/navgurukul.bangalore/?hl" />
-                </Grid>
-                    <Grid item xs={12} md={4}>
-                    <SocialIcon url="https://www.youtube.com/channel/UC9yaihhuBLgke9O6IVC-Gsw" />
-                </Grid>
-                </Grid>
+        // <React.Fragment>
 
-                <p> Made with love from NavGurukul   </p>
-               
-            </Container>
-            
-                
-            
+
+        <div className="Footer">
+            <Box display="flex" justifyContent="center" bgcolor="background.paper" >
+                <Box p={2} >
+                    <SocialIcon url="https://x.facebook.com/navgurukul/" />
+                </Box>
+                <Box p={2} >
+                    <SocialIcon url="https://www.instagram.com/navgurukul.bangalore/?hl" />
+                </Box>
+                <Box p={2}>
+                    <SocialIcon url="https://www.youtube.com/channel/UC9yaihhuBLgke9O6IVC-Gsw" />
+                </Box>
+            </Box>
+            <div style={{ backgroundColor: '#343a40' }}>
+                <Container >
+                    <Typography component="p" variant="p" className="text">
+                        Made with love from NavGurukul
+                 </Typography>
+                </Container>
             </div>
-        </React.Fragment>
+        </div>
+        // </React.Fragment>
     );
 }
